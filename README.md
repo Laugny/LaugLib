@@ -1,5 +1,30 @@
 # LaugLib (.NET Framework)
 
+## PrintScreen
+Differend ways to create a screenshot
+<br><br>
+**Code Usage**
+> Imports
+```CSharp
+using LaugLib;
+```
+> Declare Instance
+```CSharp
+PrintScreen prntScreen = new PrintScreen();
+```
+> Create Screenshots
+```CSharp
+CaptureScreen(); //returns an Image of the Screen
+
+CaptureWindow(IntPtr handle); //returns an Imagine of a Window, use the MainWindowHandle for it to work.
+
+CaptureScreenToFile(string filename, ImageFormat format); //captures an Image of the Screen and Saves it to the current Directory with the given format.
+
+CaptureWindowToFile(IntPtr handle, string filename, ImageFormat format); //captures an Image of a Window and Saves it to the current Directory with the given format.
+
+
+```
+
 ## DiscordWebhook
 Send Messages, Embeds and Files
 <br><br>
