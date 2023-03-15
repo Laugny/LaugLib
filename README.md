@@ -21,6 +21,7 @@ CaptureWindow(IntPtr handle); //returns an Imagine of a Window, use the MainWind
 CaptureScreenToFile(string filename, ImageFormat format); //captures an Image of the Screen and Saves it to the current Directory with the given format.
 
 CaptureWindowToFile(IntPtr handle, string filename, ImageFormat format); //captures an Image of a Window and Saves it to the current Directory with the given format.
+
 captureScreenToByteArray(); //returns a ByteArray
 ```
 > CaptureWindow() Example
