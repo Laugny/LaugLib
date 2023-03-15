@@ -21,8 +21,17 @@ CaptureWindow(IntPtr handle); //returns an Imagine of a Window, use the MainWind
 CaptureScreenToFile(string filename, ImageFormat format); //captures an Image of the Screen and Saves it to the current Directory with the given format.
 
 CaptureWindowToFile(IntPtr handle, string filename, ImageFormat format); //captures an Image of a Window and Saves it to the current Directory with the given format.
+captureScreenToByteArray(); //returns a ByteArray
+```
+> CaptureWindow() Example
+```CSharp
+using LaugLib;
+using LaugLib.DiscordWebHook;
 
+PrintScreen prntScreen = new PrintScreen();
 
+var handles = Process.GetProcessesByName("PROC_NAME").Select(x => x.MainWindowHandle).ToList();
+Image img = prntScreen.CaptureWindow((IntPtr)handles[0]);
 ```
 
 ## DiscordWebhook
