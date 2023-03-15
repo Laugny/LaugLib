@@ -1,4 +1,6 @@
-# CSharpDiscordWebhook
+# LaugLib
+
+## DiscordWebhook
 Simple C# written code to send messages embeds and files using discord webhooks
 <br><br>
 **Code usage .Net Framework**
