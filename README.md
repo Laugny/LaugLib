@@ -1,4 +1,5 @@
 # LaugLib (.NET Framework)
+A Powerful Library with tons of Functions
 
 ## SystemHotKeys
 Create Hotkeys and check wether they are being pressed or not. 
