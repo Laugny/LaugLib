@@ -1,7 +1,26 @@
 # LaugLib (.NET Framework)
 
+## LaugSys
+System Stuff
+<br><br>
+**Code Usage**
+> Imports
+```CSharp
+using LaugLib;
+```
+> Declare Instance
+```CSharp
+ LaugSystem laugSys = new LaugSystem(); 
+```
+> Examples
+```CSharp
+laugSys.IsAdministrator(); //returns a bool, wether the current Process is running asAdministrator
+
+ClearRecycleBin(bool IsAdminRequired = false)
+```
+
 ## PrintScreen
-Differend ways to create a screenshot
+Different ways to create a screenshot
 <br><br>
 **Code Usage**
 > Imports
@@ -14,15 +33,15 @@ PrintScreen prntScreen = new PrintScreen();
 ```
 > Create Screenshots
 ```CSharp
-CaptureScreen(); //returns an Image of the Screen
+prntScreen.CaptureScreen(); //returns an Image of the Screen
 
-CaptureWindow(IntPtr handle); //returns an Imagine of a Window, use the MainWindowHandle for it to work.
+prntScreen.CaptureWindow(IntPtr handle); //returns an Imagine of a Window, use the MainWindowHandle for it to work.
 
-CaptureScreenToFile(string filename, ImageFormat format); //captures an Image of the Screen and Saves it to the current Directory with the given format.
+prntScreen.CaptureScreenToFile(string filename, ImageFormat format); //captures an Image of the Screen and Saves it to the current Directory with the given format.
 
-CaptureWindowToFile(IntPtr handle, string filename, ImageFormat format); //captures an Image of a Window and Saves it to the current Directory with the given format.
+prntScreen.CaptureWindowToFile(IntPtr handle, string filename, ImageFormat format); //captures an Image of a Window and Saves it to the current Directory with the given format.
 
-captureScreenToByteArray(); //returns a ByteArray
+prntScreen.captureScreenToByteArray(); //returns a ByteArray
 ```
 > CaptureWindow() Example
 ```CSharp
