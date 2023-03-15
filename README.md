@@ -1,4 +1,4 @@
-# LaugLib (.NET Framwork)
+# LaugLib (.NET Framework)
 
 ## DiscordWebhook
 Send Messages, Embeds and Files
