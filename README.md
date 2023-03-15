@@ -1,5 +1,61 @@
 # LaugLib (.NET Framework)
 
+## SystemHotKeys
+Create Hotkeys and check wether they are being pressed or not. 
+It uses the user32.dll, so the HotKeyEventHandler raises an Event even if the Program is not in focus.
+<br><br>
+**Code Usage**
+> Imports
+```CSharp
+using LaugLib;
+```
+> Declare Instance
+```CSharp
+SysHotKeys keys = new SysHotKeys();
+```
+> Register a Hotkey
+```CSharp
+keys.RegisterHotkey(HotKeys.HOME, Keys.Home, this.Handle); //Hotkeys.HOME is a Enum
+keys.RegisterHotkey(0, Keys.Home, this.Handle); //You can also use an Integer to declare a Hotkey
+```
+> HotKey EventHandler
+```CSharp
+protected override void WndProc(ref Message m)
+{
+    if (m.Msg == 0x0312 && m.WParam.ToInt32() == (int)HotKeys.HOME)
+    {
+        //Execute code when HOME key is pressed
+    }
+    base.WndProc(ref m);
+}
+```
+> Example Code
+```CSharp
+using LaugLib;
+
+SysHotKeys keys = new SysHotKeys();
+
+        enum HotKeys
+        {
+            HOME = 0,
+        }
+                
+        public Form1()
+        {
+            InitializeComponent();
+            keys.RegisterHotkey(HotKeys.HOME, Keys.Home, this.Handle);
+        }
+        
+        protected override void WndProc(ref Message m)
+        {
+            if (m.Msg == 0x0312 && m.WParam.ToInt32() == (int)HotKeys.HOME)
+            {
+                MessageBox.Show("You Pressed Home!");
+            }
+            base.WndProc(ref m);
+        }
+```
+
 ## LaugSys
 System Stuff
 <br><br>
@@ -16,7 +72,9 @@ using LaugLib;
 ```CSharp
 laugSys.IsAdministrator(); //returns a bool, wether the current Process is running asAdministrator
 
-ClearRecycleBin(bool IsAdminRequired = false)
+laugSys.ClearRecycleBin(bool IsAdminRequired); //Clears the recycle bin, takes a bool as input, wether clearing the bin should be executed as Admin or not.
+
+laugSys.TaskManager(bool enable); //Enable or Disable the task manager
 ```
 
 ## PrintScreen
