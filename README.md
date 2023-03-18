@@ -1,6 +1,50 @@
 # LaugLib (.NET Framework)
 A Powerful Library with tons of Functions
 
+## LaugSys
+System Stuff
+<br><br>
+**Code Usage**
+> Imports
+```CSharp
+using LaugLib;
+```
+> Declare Instance
+```CSharp
+ LaugSystem laugSys = new LaugSystem(); 
+```
+> Examples
+```CSharp
+laugSys.IsAdministrator(); //returns a bool, wether the current Process is running asAdministrator
+
+laugSys.GenerateAscii(int length); //Generate completely random ASCII Symbols with the given Length.
+
+laugSys.ClearRecycleBin(bool IsAdminRequired); //Clears the recycle bin, takes a bool as input, wether clearing the bin should be executed as Admin or not.
+
+laugSys.TaskManager(bool enable); //Enable or Disable the task manager
+
+laugSys.OpenCDTray(); // Opens the CD Tray if there is one
+
+laugSys.CloseCDTray(); //Closes the CD Tray if there is one and if its already open.
+
+laugSys.ProcWindowState(string ProcessName); //Retrieve the Window State of a Process. First Parameter is The Process Name. Possible Return types: Hidden, Normal, Minimized, Maximized
+
+laugSys.ProcWindowState(int ProcessID); //Retrieve the Window State of a Process. First Parameter is PID. Possible Return types: Hidden, Normal, Minimized, Maximized
+
+laugSys.IProcWindowState(string ProcessName); //Retrieve the Window State of a Process. First Parameter is The Process Name. Possible Return types: 0 - Hidden, 1 - Normal, 2 - Minimized, 3 - Maximized, 4 - N/A
+
+laugSys.IProcWindowState(int ProcessID); //Retrieve the Window State of a Process. First Parameter is PID. Possible Return types: 0 - Hidden, 1 - Normal, 2 - Minimized, 3 - Maximized, 4 - N/A
+
+//GetAsyncKeyState
+while (true)
+{                
+    if (laugSys.GetKeyState == Keys.Space)
+    {
+        //do something when Space is pressed.
+    }                
+}
+```
+
 ## SystemHotKeys
 Create Hotkeys and check wether they are being pressed or not. 
 It uses the user32.dll, so the HotKeyEventHandler raises an Event even if the Program is not in focus.
@@ -55,50 +99,6 @@ SysHotKeys keys = new SysHotKeys();
             }
             base.WndProc(ref m);
         }
-```
-
-## LaugSys
-System Stuff
-<br><br>
-**Code Usage**
-> Imports
-```CSharp
-using LaugLib;
-```
-> Declare Instance
-```CSharp
- LaugSystem laugSys = new LaugSystem(); 
-```
-> Examples
-```CSharp
-laugSys.IsAdministrator(); //returns a bool, wether the current Process is running asAdministrator
-
-laugSys.GenerateAscii(int length); //Generate completely random ASCII Symbols with the given Length.
-
-laugSys.ClearRecycleBin(bool IsAdminRequired); //Clears the recycle bin, takes a bool as input, wether clearing the bin should be executed as Admin or not.
-
-laugSys.TaskManager(bool enable); //Enable or Disable the task manager
-
-laugSys.OpenCDTray(); // Opens the CD Tray if there is one
-
-laugSys.CloseCDTray(); //Closes the CD Tray if there is one and if its already open.
-
-laugSys.ProcWindowState(string ProcessName); //Retrieve the Window State of a Process. First Parameter is The Process Name. Possible Return types: Hidden, Normal, Minimized, Maximized
-
-laugSys.ProcWindowState(int ProcessID); //Retrieve the Window State of a Process. First Parameter is PID. Possible Return types: Hidden, Normal, Minimized, Maximized
-
-laugSys.IProcWindowState(string ProcessName); //Retrieve the Window State of a Process. First Parameter is The Process Name. Possible Return types: 0 - Hidden, 1 - Normal, 2 - Minimized, 3 - Maximized, 4 - N/A
-
-laugSys.IProcWindowState(int ProcessID); //Retrieve the Window State of a Process. First Parameter is PID. Possible Return types: 0 - Hidden, 1 - Normal, 2 - Minimized, 3 - Maximized, 4 - N/A
-
-//GetAsyncKeyState
-while (true)
-{                
-    if (laugSys.GetKeyState == Keys.Space)
-    {
-        //do something when Space is pressed.
-    }                
-}
 ```
 
 ## Hardware Info (Win32_DiskDrive)
