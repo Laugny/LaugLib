@@ -81,13 +81,13 @@ laugSys.OpenCDTray(); // Opens the CD Tray if there is one
 
 laugSys.CloseCDTray(); //Closes the CD Tray if there is one and if its already open.
 
-laugSys.ProcWindowState(string ProcessName); //Retrieve the Window State of a Process. First Parameter is The Process Name.
+laugSys.ProcWindowState(string ProcessName); //Retrieve the Window State of a Process. First Parameter is The Process Name. Possible Return types: Hidden, Normal, Minimized, Maximized
 
-laugSys.ProcWindowState(int ProcessID); //Retrieve the Window State of a Process. First Parameter is PID.
+laugSys.ProcWindowState(int ProcessID); //Retrieve the Window State of a Process. First Parameter is PID. Possible Return types: Hidden, Normal, Minimized, Maximized
 
-laugSys.IProcWindowState(string ProcessName); //Retrieve the Window State of a Process. First Parameter is The Process Name.
+laugSys.IProcWindowState(string ProcessName); //Retrieve the Window State of a Process. First Parameter is The Process Name. Possible Return types: 0 - Hidden, 1 - Normal, 2 - Minimized, 3 - Maximized, 4 - N/A
 
-laugSys.IProcWindowState(int ProcessID); //Retrieve the Window State of a Process. First Parameter is PID.
+laugSys.IProcWindowState(int ProcessID); //Retrieve the Window State of a Process. First Parameter is PID. Possible Return types: 0 - Hidden, 1 - Normal, 2 - Minimized, 3 - Maximized, 4 - N/A
 ```
 
 ## PrintScreen
