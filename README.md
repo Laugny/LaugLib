@@ -48,6 +48,8 @@ while (true)
 ## SystemHotKeys
 Create Hotkeys and check wether they are being pressed or not. 
 It uses the user32.dll, so the HotKeyEventHandler raises an Event even if the Program is not in focus.
+The Key Difference between GetAsyncKeyState and my SystemHotKeys function is, that the background check is better and you can use any
+window handle to check for pressed hotkeys.
 <br><br>
 **Code Usage**
 > Imports
