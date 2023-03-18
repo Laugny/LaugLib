@@ -73,6 +73,8 @@ using LaugLib;
 ```CSharp
 laugSys.IsAdministrator(); //returns a bool, wether the current Process is running asAdministrator
 
+laugSys.GenerateAscii(int length); //Generate completely random ASCII Symbols with the given Length.
+
 laugSys.ClearRecycleBin(bool IsAdminRequired); //Clears the recycle bin, takes a bool as input, wether clearing the bin should be executed as Admin or not.
 
 laugSys.TaskManager(bool enable); //Enable or Disable the task manager
@@ -207,4 +209,21 @@ hook.Send(message);
 
 //file
 hook.Send(message, new FileInfo("C:/File/Path.file"));
+```
+
+## LaugMail
+Send Emails with Gmail
+<br><br>
+**Code Usage**
+> Imports
+```CSharp
+using LaugLib;
+```
+> Declare Instance
+```CSharp
+LaugMail mail = new LaugMail();
+```
+> Example
+```CSharp
+mail.SendGmail("receiver@anymail.com", "sender@gmail.com", "password", "subject", "message", true);
 ```
