@@ -156,8 +156,6 @@ embed.Fields.Add(new EmbedField() {Name="Field Name 2", Value="Field Value 2", I
 //set embed
 message.Embeds = new List<DiscordEmbed>();
 message.Embeds.Add(embed);
-
-//
 ```
 
 > Sending message
