@@ -76,6 +76,18 @@ laugSys.IsAdministrator(); //returns a bool, wether the current Process is runni
 laugSys.ClearRecycleBin(bool IsAdminRequired); //Clears the recycle bin, takes a bool as input, wether clearing the bin should be executed as Admin or not.
 
 laugSys.TaskManager(bool enable); //Enable or Disable the task manager
+
+laugSys.OpenCDTray(); // Opens the CD Tray if there is one
+
+laugSys.CloseCDTray(); //Closes the CD Tray if there is one and if its already open.
+
+laugSys.ProcWindowState(string ProcessName); //Retrieve the Window State of a Process. First Parameter is The Process Name.
+
+laugSys.ProcWindowState(int ProcessID); //Retrieve the Window State of a Process. First Parameter is PID.
+
+laugSys.IProcWindowState(string ProcessName); //Retrieve the Window State of a Process. First Parameter is The Process Name.
+
+laugSys.IProcWindowState(int ProcessID); //Retrieve the Window State of a Process. First Parameter is PID.
 ```
 
 ## PrintScreen
