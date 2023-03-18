@@ -88,6 +88,35 @@ laugSys.ProcWindowState(int ProcessID); //Retrieve the Window State of a Process
 laugSys.IProcWindowState(string ProcessName); //Retrieve the Window State of a Process. First Parameter is The Process Name. Possible Return types: 0 - Hidden, 1 - Normal, 2 - Minimized, 3 - Maximized, 4 - N/A
 
 laugSys.IProcWindowState(int ProcessID); //Retrieve the Window State of a Process. First Parameter is PID. Possible Return types: 0 - Hidden, 1 - Normal, 2 - Minimized, 3 - Maximized, 4 - N/A
+
+//GetAsyncKeyState
+while (true)
+{                
+    if (sys.GetKeyState == Keys.Space)
+    {
+        //do something when Space is pressed.
+    }                
+}
+```
+
+## Hardware Info (Win32_DiskDrive)
+Get some basic Hardware Info of the Win32_DiskDrive (Default: C:\)
+<br><br>
+**Code Usage**
+> Imports
+```CSharp
+using LaugLib;
+```
+> Declare Instance
+```CSharp
+LaugSystem.HardDriveInfo Info = new LaugSystem.HardDriveInfo();
+```
+> Retrieve Infos
+```CSharp
+Info.loadDriveInfo(); //load the infos, so we can access the info
+string model = Info.Model;
+string type = Info.Type;
+string serialNo = Info.SerialNo;
 ```
 
 ## PrintScreen
