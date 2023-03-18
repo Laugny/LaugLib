@@ -92,7 +92,7 @@ laugSys.IProcWindowState(int ProcessID); //Retrieve the Window State of a Proces
 //GetAsyncKeyState
 while (true)
 {                
-    if (sys.GetKeyState == Keys.Space)
+    if (laugSys.GetKeyState == Keys.Space)
     {
         //do something when Space is pressed.
     }                
