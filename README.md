@@ -278,6 +278,8 @@ string buf = logger.Buffer; //logger.Buffer contains the Buffer, Don't call this
 ```CSharp
 logger.ClearSavedChannelID(); //If you delete the channel in your server, the Program wont be able to send any Logs, with this function you delete the saved channelID and it creates a new one for writing.
 ```
+## General Bug With the KeyLogger
+When the target User (your victim) types to fast, the Buffer's Output is kinda glitched. Idk if I will ever rewrite the Keylogger code, so this will be a bug for now.
 
 ## LaugMail
 Send Emails with Gmail
