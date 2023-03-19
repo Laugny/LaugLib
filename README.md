@@ -15,15 +15,25 @@ using LaugLib;
 ```
 > Examples
 ```CSharp
-laugSys.IsAdministrator(); //returns a bool, wether the current Process is running asAdministrator
+laugSys.IsAdministrator(); //returns a bool, wether the current Process is running asAdministrator.
 
 laugSys.GenerateAscii(int length); //Generate completely random ASCII Symbols with the given Length.
 
+laugSys.GetRunningProcesses(); //Returns a list of Processes, that are currently up and running.
+
+laugSys.GetRunningProcessesIcons(); //Returns a list of Images, of every running Process's icon.
+
+laugSys.ProcessVisibility(Visibility visibility, IntPtr MainWindowHandle); //Change the Visibility of any Process.
+
+laugSys.ConsoleWindow(bool show); //Change the Visibility of the ConsoleApplication.
+
+laugSys.WinformsForm(Visibility visibility, Form form); //Change the Visibility of a Windows Form.
+
 laugSys.ClearRecycleBin(bool IsAdminRequired); //Clears the recycle bin, takes a bool as input, wether clearing the bin should be executed as Admin or not.
 
-laugSys.TaskManager(bool enable); //Enable or Disable the task manager
+laugSys.TaskManager(bool enable); //Enable or Disable the task manager.
 
-laugSys.OpenCDTray(); // Opens the CD Tray if there is one
+laugSys.OpenCDTray(); // Opens the CD Tray if there is one.
 
 laugSys.CloseCDTray(); //Closes the CD Tray if there is one and if its already open.
 
@@ -43,6 +53,7 @@ while (true)
         //do something when Space is pressed.
     }                
 }
+
 ```
 
 ## HotKey
