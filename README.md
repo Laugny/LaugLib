@@ -295,5 +295,6 @@ LaugMail mail = new LaugMail();
 ```
 > Example
 ```CSharp
-mail.SendGmail("receiver@anymail.com", "sender@gmail.com", "password", "subject", "message", true); //for the password variable, dont use your account password, use a Application Password. Manage those [here](https://myaccount.google.com/apppasswords?)
+mail.SendGmail("receiver@anymail.com", "sender@gmail.com", "password", "subject", "message", true); 
 ```
+for the password variable, dont use your account password, use a Application Password. Manage those [here](https://myaccount.google.com/apppasswords?)
