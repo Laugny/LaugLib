@@ -35,7 +35,7 @@ laugSys.IProcWindowState(string ProcessName); //Retrieve the Window State of a P
 
 laugSys.IProcWindowState(int ProcessID); //Retrieve the Window State of a Process. First Parameter is PID. Possible Return types: 0 - Hidden, 1 - Normal, 2 - Minimized, 3 - Maximized, 4 - N/A
 
-//GetAsyncKeyState
+//GetAsyncKeyState (If you need a check in the background, use the class HotKey, it contains an EventHandler)
 while (true)
 {                
     if (laugSys.GetKeyState == Keys.Space)
@@ -45,9 +45,34 @@ while (true)
 }
 ```
 
-## SystemHotKeys
+## HotKey
 Create Hotkeys and check wether they are being pressed or not. 
 It uses the user32.dll, so the HotKeyEventHandler raises an Event even if the Program is not in focus.
+<br><br>
+**Code Usage**
+> Imports
+```CSharp
+using LaugLib;
+```
+> Declare Instance
+```CSharp
+HotKey hkHome = new HotKey(Keys.Home);
+```
+> In your Form1_Load Method, or Main Method for console apps use this:
+```CSharp
+ hkHome.OnHotKeyPressed += HkHome_OnHotKeyPressed;
+ hkHome.StartKeyPressEventListener();
+```
+> EventHandler
+```CSharp
+private void HkHome_OnHotKeyPressed()
+{
+    MessageBox.Show("Home Pressed");
+}
+```
+
+## SystemHotKeys (Obsolete)
+Create Hotkeys and check wether they are being pressed or not. 
 The Key Difference between GetAsyncKeyState and SystemHotKeys function is, that the background check is better and you can use any
 window handle to check for pressed hotkeys.
 <br><br>
