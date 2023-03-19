@@ -1,5 +1,6 @@
 # LaugLib (.NET Framework & .NET6)
 A Powerful Library with tons of Functions
+
 **NOTE:** The KeyLogger Function to send the Buffer to a Discord Channel only works with .NET6 and up.
 
 ## LaugSys
